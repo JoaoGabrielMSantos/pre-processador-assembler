@@ -35,4 +35,12 @@ void processar_linha(char *linha, FILE *saida);
  */
 void normalizar_linha(char *linha, char *saida);
 
+/*
+ * Wrapper com a assinatura exigida pela especificação da etapa de análise
+ * léxica: lê todo o conteúdo do arquivo 'in' e grava o resultado do
+ * pré-processamento no arquivo 'out'. Internamente reaproveita
+ * ler_arquivo() e preprocessar().
+ */
+void PreProcessamento(FILE *in, FILE *out);
+
 #endif /* PREPROCESSADOR_H */

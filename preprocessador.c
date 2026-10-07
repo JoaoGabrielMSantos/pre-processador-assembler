@@ -145,3 +145,10 @@ void preprocessar(const char *conteudo, FILE *saida) {
         processar_linha(linha, saida);
     }
 }
+
+void PreProcessamento(FILE *in, FILE *out) {
+    long tamanho;
+    char *conteudo = ler_arquivo(in, &tamanho);
+    preprocessar(conteudo, out);
+    free(conteudo);
+}

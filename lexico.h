@@ -44,4 +44,11 @@ void DefinirSaidasAuxiliares(FILE *saidaTS, FILE *saidaErr);
  */
 void AnaliseLexica(FILE *in, FILE *out);
 
+/*
+ * Retorna a quantidade de erros léxicos encontrados na última execução de
+ * AnaliseLexica(). Usada por main() para decidir se a análise sintática
+ * deve ser executada (mecanismo de integração por consulta ao estado).
+ */
+int QuantidadeErrosLexicos(void);
+
 #endif /* LEXICO_H */

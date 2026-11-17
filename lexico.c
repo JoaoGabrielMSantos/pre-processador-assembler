@@ -144,7 +144,7 @@ static int tabelaInserirOuAtualizar(const char *lexema, const char *categoria, i
         Simbolo *novaTabela = (Simbolo *)realloc(g_tabela, (size_t)novaCap * sizeof(Simbolo));
         if (novaTabela == NULL) {
             fprintf(stderr, "Erro: memoria insuficiente para a tabela de simbolos.\n");
-            exit(1);
+            exit(2);
         }
         g_tabela = novaTabela;
         g_tabelaCap = novaCap;
@@ -631,4 +631,8 @@ void AnaliseLexica(FILE *in, FILE *out) {
     if (g_saidaErr != NULL && g_qtdErros == 0) {
         fprintf(g_saidaErr, "Nenhum erro léxico encontrado.\n");
     }
+}
+
+int QuantidadeErrosLexicos(void) {
+    return g_qtdErros;
 }

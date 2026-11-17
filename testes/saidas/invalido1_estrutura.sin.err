@@ -1,0 +1,10 @@
+Linha 4, coluna 9: Encontrado REG("$t1"); esperado SMB_COM(",").
+Linha 5, coluna 13: Encontrado o término da linha (EOL); esperado SMB_COM(",").
+Linha 6, coluna 9: Encontrado ID("mensagem"); esperado NUM_INT.
+Linha 7, coluna 9: Encontrado REG("$t0"); esperado EOL (término da linha).
+Linha 8, coluna 14: Encontrado SMB_COM(","); esperado EOL (término da linha).
+Linha 9, coluna 11: Encontrado NUM_INT("5"); esperado REG.
+Linha 10, coluna 4: Encontrado NUM_INT("10"); esperado REG.
+Linha 11, coluna 3: Encontrado REG("$ra"); esperado ID.
+Linha 12, coluna 13: Encontrado o término da linha (EOL); esperado SMB_COM(",").
+Linha 13, coluna 9: Encontrado NUM_INT("4"); esperado ID.

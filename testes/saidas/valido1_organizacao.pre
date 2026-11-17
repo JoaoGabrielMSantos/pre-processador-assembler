@@ -1,0 +1,16 @@
+.text
+.globl main
+main:
+li $t0, 10
+loop: addi $t0, $t0, -1
+bne $t0, $zero, loop
+fim:
+.data
+.globl valor
+valor: .word 5
+.data
+.text
+la $a0, valor
+lw $t1, valor
+j inexistente
+syscall

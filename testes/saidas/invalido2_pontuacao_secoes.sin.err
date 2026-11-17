@@ -1,0 +1,13 @@
+Linha 2, coluna 17: Encontrado o término da linha (EOL); esperado NUM_INT.
+Linha 3, coluna 16: Encontrado NUM_INT("2"); esperado EOL (término da linha).
+Linha 4, coluna 1: Encontrado INS_LI("li"); esperado rótulo, diretiva de dados ou .globl (instruções só são admitidas na seção .text).
+Linha 5, coluna 8: Encontrado INS_LI("li"); esperado SMB_COL(":").
+Linha 6, coluna 4: Encontrado INS_ADD("add"); esperado diretiva de dados ou EOL (instruções só são admitidas na seção .text).
+Linha 8, coluna 11: Encontrado REG("$sp"); esperado SMB_OPA("(").
+Linha 9, coluna 14: Encontrado o término da linha (EOL); esperado SMB_CPA(")").
+Linha 10, coluna 8: Encontrado NUM_INT("0"); esperado SMB_COM(",").
+Linha 11, coluna 6: Encontrado INS_ADDI("addi"); esperado SMB_COL(":").
+Linha 12, coluna 1: Encontrado DIR_WORD(".word"); esperado rótulo, instrução ou .globl (diretivas de dados só são admitidas na seção .data).
+Linha 13, coluna 7: Encontrado DIR_SPACE(".space"); esperado instrução ou EOL (diretivas de dados só são admitidas na seção .data).
+Linha 14, coluna 1: Encontrado DIR_ASCIIZ(".asciiz"); esperado rótulo, instrução ou .globl (diretivas de dados só são admitidas na seção .data).
+Linha 15, coluna 7: Encontrado NUM_INT("5"); esperado EOL (término da linha).

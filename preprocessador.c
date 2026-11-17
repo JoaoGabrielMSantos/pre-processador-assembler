@@ -6,20 +6,20 @@
 char *ler_arquivo(FILE *fp, long *tamanho) {
     if (fseek(fp, 0, SEEK_END) != 0) {
         fprintf(stderr, "Erro: falha ao acessar o arquivo de entrada.\n");
-        exit(1);
+        exit(2);
     }
 
     long tam = ftell(fp);
     if (tam < 0) {
         fprintf(stderr, "Erro: falha ao determinar o tamanho do arquivo.\n");
-        exit(1);
+        exit(2);
     }
     rewind(fp);
 
     char *buffer = (char *)malloc((size_t)tam + 1);
     if (buffer == NULL) {
         fprintf(stderr, "Erro: memória insuficiente para ler o arquivo.\n");
-        exit(1);
+        exit(2);
     }
 
     size_t lidos = fread(buffer, 1, (size_t)tam, fp);

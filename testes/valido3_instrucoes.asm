@@ -1,0 +1,43 @@
+# Caso valido 3 - todos os grupos e operacoes de instrucoes
+.data
+dado: .word 1
+
+.text
+inicio:
+   add  $t0, $t1, $t2
+   addu $t0, $t1, $t2
+   sub  $t0, $t1, $t2
+   subu $t0, $t1, $t2
+   mul  $t0, $t1, $t2
+   and  $t0, $t1, $t2
+   or   $t0, $t1, $t2
+   xor  $t0, $t1, $t2
+   nor  $t0, $t1, $t2
+   slt  $t0, $t1, $t2
+   move $t0, $t1
+   div  $t0, $t1
+   mflo $t3
+   mfhi $t4
+   addi $t0, $t0, 0x10
+   sll  $t0, $t1, 2
+   srl  $t0, $t1, 40          # deslocamento invalido: nao e erro sintatico
+   li   $t0, -5
+   la   $a0, dado
+   lw   $t0, dado
+   sw   $t0, 4($sp)
+   lb   $t0, 0($a0)
+   sb   $t0, -1($a0)
+   lh   $t0, 2($a0)
+   sh   $t0, dado
+   beq  $t0, $t1, inicio
+   bne  $t0, $t1, inicio
+   blt  $t0, $t1, inicio
+   ble  $t0, $t1, inicio
+   bgt  $t0, $t1, inicio
+   bge  $t0, $t1, inicio
+   jal  funcao
+   j    inicio
+inicio:                       # rotulo duplicado: nao e erro sintatico
+   nop
+funcao: jr $ra
+   syscall

@@ -1,0 +1,16 @@
+# Caso invalido 1 - operandos ausentes, excedentes, fora de ordem e de categoria
+.data
+mensagem: .asciiz "oi"
+
+.text
+add $t0 $t1, $t2
+add $t0, $t1
+li $t0, mensagem
+syscall $t0
+move $t0, $t1, $t2
+addi $t0, 5, $t1
+jr 10
+j $ra
+beq $t0, $t1
+la $a0, 4
+   li $t1, 1              # linha valida apos os erros (recuperacao)
